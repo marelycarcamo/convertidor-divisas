@@ -15,7 +15,14 @@
 
      
         #banner{
-            z-index: 0;
+            position: relative;
+        }
+
+        #logo{
+            position: absolute;
+            left:10px;
+            top:10px;
+
         }
 
         nav{
@@ -33,10 +40,14 @@
         }
 
 
+      
+    
+/*********** CONVERTIDOR DIVISAS ************/
+                
         .titulo{
             color:darkblue;
         }
-        
+       
         #convertidor{
             background-color: darkblue;
             color:white;
@@ -48,18 +59,17 @@
 
         #importe, #origen, #destino{
            font-size: larger;
+           border-radius: 25px;
         }
 
         #importe{
             width: 150px;
         }
 
+/****************** TABLA *********************/
         table{
-            text-align: center;
-            background-color: darkblue;
-            color: yellow;
             padding: 20px;
-            
+            margin: auto;
         }
 
 
@@ -69,16 +79,28 @@
         }
 
 
-        table td{
-            padding: 10px;
+        table td, th{
+            padding: 20px;
         }
 
-   
+
+        .azul{
+            background-color: darkblue;
+            color:white
+        }
+
+        .gris{
+            background-color: darkgray;
+            color:white
+        }
+
+        /********* FOOTER *************/
+
         footer li{
             display: inline-block;
             border-right: darkblue 1px solid;
-            padding-right: 15px;
-            padding-left: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
 
         }
 
@@ -100,8 +122,11 @@
 <body>
 
 <header>
-    <div id="banner">
+    <div id="banner"></div>
         <img src="panoramica-santiago.jpg" alt="">
+        <div id="logo">
+            <img src="logo-xe.png" alt="" width="120px;">
+        </div>
     </div>
 
  
@@ -163,7 +188,7 @@
 <br><br><br>
 
 <table>
-    <tr>
+    <tr class="azul">
         <th></th>
         <th>USD</th>
         <th>EUR</th>
@@ -172,7 +197,7 @@
         <th>AUD</th>
     </tr>
     
-    <tr>
+    <tr class="gris">
         <th>USD</th>
         <td>1,00000</td>
         <td>0,90407</td>
@@ -181,7 +206,7 @@
         <td>1,48471</td>
     </tr>
   
-    <tr>
+    <tr class="azul">
         <th>EUR</th>
         <td>1,10443</td>
         <td>1,00000</td>
@@ -190,7 +215,7 @@
         <td>1,63977</td>
     </tr>
     
-    <tr>
+    <tr class="gris">
         <th>GBP</th>
         <td>1,30326</td>
         <td>1,18003</td>
@@ -200,7 +225,7 @@
 
     </tr>
     
-    <tr>
+    <tr class="azul">
         <th>INR</th>
         <td>0,01406</td>
         <td>0,01273</td>
@@ -210,7 +235,7 @@
 
     </tr>
 
-    <tr>
+    <tr class="gris">
         <th>AUD</th>
         <td>0,67353</td>
         <td>0,60984</td>
@@ -220,10 +245,10 @@
     </tr>
 
 </table>
-
+<br><br>
 <footer>
     <hr>
-    <br>
+
 
     <p style="text-align: center;">1995-2020 AXE.COM SPA.</p>
 <ul>
