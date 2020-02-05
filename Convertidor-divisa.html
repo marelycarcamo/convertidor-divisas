@@ -57,7 +57,7 @@
         table{
             text-align: center;
             background-color: darkblue;
-            color: lightblue;
+            color: yellow;
             padding: 20px;
             
         }
@@ -65,6 +65,7 @@
 
         table tr{
             border-bottom: darkblue 1px solid;
+            text-align: center;
         }
 
 
@@ -137,9 +138,19 @@
 
     </select>
 
+    <p></p>
 
     <label for="destino">Para</label>
     <select name=destino id="destino" onchange="cambia_destino()"> 
+        <option value="origen">USD - Dólar estadounidense
+            <option value="origen">EUR - Euro
+            <option value="origen">GBP - Libra esterlina
+            <option value="origen">INR - Rupia india
+            <option value="origen">AUD - Dólar australiano
+            <option value="origen">CLP - Peso chileno
+            <option value="origen">CLP - Peso chileno
+    
+       
     </select>
 
     <br><br><br> <p style="font-size: small;">Todas las cifras son tipos de cambio del mercado medio en tiempo real, que no están disponibles para los clientes individuales y sirven solo de referencia.</p>
