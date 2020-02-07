@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>convertidor_divisa</title>
+    <title>convertidor_divisas</title>
 
     <style>
 
@@ -13,15 +13,12 @@
 
     
 
-     
-        #banner{
-            position: relative;
-        }
 
         #logo{
             position: absolute;
             left:10px;
             top:10px;
+           
 
         }
 
@@ -51,30 +48,34 @@
         #convertidor{
             background-color: darkblue;
             color:white;
-            padding: 25px;
+            padding-top: 25px;
+            padding-bottom: 25px;
             text-align: center;
         
           
         }
 
         #importe, #origen, #destino{
-           font-size: larger;
+          height: 40px;
            border-radius: 25px;
+           width: 180px;
         }
 
         #importe{
-            width: 150px;
+            font-size: 25px;
         }
+        
 
 /****************** TABLA *********************/
         table{
             padding: 20px;
             margin: auto;
+          /*  border-collapse: collapse;  */
         }
 
 
         table tr{
-            border-bottom: darkblue 1px solid;
+          /*  border-bottom: darkblue 1px solid;  */
             text-align: center;
         }
 
@@ -122,10 +123,11 @@
 <body>
 
 <header>
+
     <div id="banner"></div>
         <img src="panoramica-santiago.jpg" alt="">
         <div id="logo">
-            <img src="logo-xe.png" alt="" width="120px;">
+            <img src="logo-xe.png" alt="" width="120px;" style="border-radius: 50%;">
         </div>
     </div>
 
@@ -153,7 +155,7 @@
 
     <label for="origen">De...</label>
     <select name=origen id="origen" onchange="cambia_origen()"> 
-        <option value="origen">USD - Dólar estadounidense
+        <option value="origen"><img src="usd.svg" alt=""> USD - Dólar estadounidense
         <option value="origen">EUR - Euro
         <option value="origen">GBP - Libra esterlina
         <option value="origen">INR - Rupia india
@@ -163,11 +165,11 @@
 
     </select>
 
-    <p></p>
+   <img src="" alt="">
 
     <label for="destino">Para</label>
     <select name=destino id="destino" onchange="cambia_destino()"> 
-        <option value="origen">USD - Dólar estadounidense
+        <option value="origen"> USD - Dólar estadounidense 
             <option value="origen">EUR - Euro
             <option value="origen">GBP - Libra esterlina
             <option value="origen">INR - Rupia india
@@ -186,19 +188,19 @@
 
 
 <br><br><br>
-
+<div id="contenedor_tabla" style="overflow: auto;" >
 <table>
     <tr class="azul">
         <th></th>
-        <th>USD</th>
-        <th>EUR</th>
-        <th>GBP</th>
-        <th>INR</th>
-        <th>AUD</th>
+        <th><img src="usd.svg" alt="">  USD</th>
+        <th><img src="eur.svg" alt=""> EUR</th>
+        <th><img src="gbp.svg" alt="">GBP</th>
+        <th><img src="inr.svg" alt=""> INR</th>
+        <th><img src="aud.svg" alt=""> AUD</th>
     </tr>
     
     <tr class="gris">
-        <th>USD</th>
+        <th><img src="usd.svg"alt="">    USD</th>
         <td>1,00000</td>
         <td>0,90407</td>
         <td>0,77000</td>
@@ -207,7 +209,7 @@
     </tr>
   
     <tr class="azul">
-        <th>EUR</th>
+        <th><img src="eur.svg" alt=""> </script> EUR</th>
         <td>1,10443</td>
         <td>1,00000</td>
         <td>0,84744</td>
@@ -216,7 +218,7 @@
     </tr>
     
     <tr class="gris">
-        <th>GBP</th>
+        <th><img src="gbp.svg" alt=""> GBP</th>
         <td>1,30326</td>
         <td>1,18003</td>
         <td>1,00000</td>
@@ -226,7 +228,7 @@
     </tr>
     
     <tr class="azul">
-        <th>INR</th>
+        <th><img src="inr.svg" alt=""> INR</th>
         <td>0,01406</td>
         <td>0,01273</td>
         <td>0,01079</td>
@@ -236,7 +238,7 @@
     </tr>
 
     <tr class="gris">
-        <th>AUD</th>
+        <th><img src="aud.svg" alt=""> AUD</th>
         <td>0,67353</td>
         <td>0,60984</td>
         <td>0,51680</td>
@@ -245,6 +247,7 @@
     </tr>
 
 </table>
+</div>
 <br><br>
 <footer>
     <hr>
