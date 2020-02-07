@@ -11,19 +11,14 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-    
-
-
         #logo{
             position: absolute;
             left:10px;
             top:10px;
-           
-
         }
 
         nav{
-            background-color:darkblue;
+            background-color: rgb(28, 28, 80);
         }
 
         nav li{
@@ -33,8 +28,16 @@
 
         nav a{
             color: white;
+            text-decoration:none;
             
         }
+
+        nav li:hover{
+            background-color: grey ;
+            color:rgb(28, 28, 80);
+            text-decoration: underline;
+        }
+
 
 
       
@@ -42,21 +45,19 @@
 /*********** CONVERTIDOR DIVISAS ************/
                 
         .titulo{
-            color:darkblue;
+            color:rgb(28, 28, 80)
         }
        
         #convertidor{
-            background-color: darkblue;
+            background-color: rgb(28, 28, 80);
             color:white;
             padding-top: 25px;
             padding-bottom: 25px;
             text-align: center;
-        
-          
         }
 
         #importe, #origen, #destino{
-          height: 40px;
+           height: 40px;
            border-radius: 25px;
            width: 180px;
         }
@@ -86,7 +87,7 @@
 
 
         .azul{
-            background-color: darkblue;
+            background-color: rgb(28, 28, 80);
             color:white
         }
 
@@ -99,19 +100,20 @@
 
         footer li{
             display: inline-block;
-            border-right: darkblue 1px solid;
+            border-right: rgb(28, 28, 80) 2px solid;
             padding-right: 20px;
             padding-left: 20px;
 
         }
 
+        
         footer ul{
             text-align: center;
         }
 
         footer li:last-child {
         border-right: none;
-      }       
+        }       
 
         
         
@@ -125,9 +127,9 @@
 <header>
 
     <div id="banner"></div>
-        <img src="panoramica-santiago.jpg" alt="">
+        <img src="panoramica-santiago.jpg" alt="" width="100%">
         <div id="logo">
-            <img src="logo-xe.png" alt="" width="120px;" style="border-radius: 50%;">
+            <img src="logo-xe.png" alt="" width="25%;" style="border-radius: 50%;">
         </div>
     </div>
 
@@ -200,7 +202,7 @@
     </tr>
     
     <tr class="gris">
-        <th><img src="usd.svg"alt="">    USD</th>
+        <th><img src="usd.svg"alt=""> USD</th>
         <td>1,00000</td>
         <td>0,90407</td>
         <td>0,77000</td>
@@ -249,8 +251,8 @@
 </table>
 </div>
 <br><br>
-<footer>
-    <hr>
+<footer style="background-color: darkgray; color: rgb(28, 28, 80);">
+    <hr style="background-color: rgb(28, 28, 80); height: 2px;">
 
 
     <p style="text-align: center;">1995-2020 AXE.COM SPA.</p>
@@ -259,9 +261,12 @@
     <li><a href="#">Mapa de Sitio</a></li>
     <li><a href="#">Privacidad</a></li>
     <li><a href="#">Politicas de cookies</a></li>
-    <li><a href="#">Archivos y Complementos</a></li>
+    <li><a href="#">Complementos</a></li>
+    <li><a href="#">Contacto</a></li>
 
 </ul>
+
+<br><br>
 
 
 </footer>
