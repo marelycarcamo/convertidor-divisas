@@ -66,10 +66,35 @@
             font-size: 25px;
         }
         
+        #btn {
+        background: white;
+        background-image: url("peso.svg");
+        background-size: cover;
+        background-position: center;
+        border: none;
+        padding: 20px;
+        width: 60px;
+        border-radius: 900px;
+        transition: all 0.5s;
+        cursor: pointer;
+        }
+        
+        .btn:hover{
+        width: 75px;
+        height: 75px;
+        }
+
+
+
 
 /****************** TABLA *********************/
+
+        table img{
+            width: 20%;
+        }
+
         table{
-            padding: 20px;
+            padding: 19px;
             margin: auto;
           /*  border-collapse: collapse;  */
         }
@@ -82,7 +107,7 @@
 
 
         table td, th{
-            padding: 20px;
+            padding: 10px;
         }
 
 
@@ -93,7 +118,7 @@
 
         .gris{
             background-color: darkgray;
-            color:white
+            color:rgb(28, 28, 80)
         }
 
         /********* FOOTER *************/
@@ -167,7 +192,7 @@
 
     </select>
 
-   <img src="" alt="">
+    <input type="button" id="btn" name="cambio">
 
     <label for="destino">Para</label>
     <select name=destino id="destino" onchange="cambia_destino()"> 
@@ -192,9 +217,9 @@
 <br><br><br>
 <div id="contenedor_tabla" style="overflow: auto;" >
 <table>
-    <tr class="azul">
+    <tr class="azul" id="titulo_tabla" >
         <th></th>
-        <th><img src="usd.svg" alt="">  USD</th>
+        <th><img src="usd.svg" alt=""> USD</th> 
         <th><img src="eur.svg" alt=""> EUR</th>
         <th><img src="gbp.svg" alt="">GBP</th>
         <th><img src="inr.svg" alt=""> INR</th>
