@@ -13,10 +13,12 @@
         }
 
         #logo{
-            position: absolute;
+            position:absolute;
             left:10px;
             top:10px;
         }
+
+        
 
         nav{
             background-color: rgb(28, 28, 80);
@@ -91,7 +93,7 @@
 /****************** TABLA *********************/
 
         table img{
-            width: 20%;
+            width: 45px;
         }
 
         table{
@@ -108,7 +110,7 @@
 
 
         table td, th{
-            padding: 10px;
+            padding: 10px 15px;
         }
 
 
@@ -150,17 +152,57 @@
 </head>
 <body>
 
-<header>
 
-    <div id="banner"></div>
-        <img src="imagenes/panoramica-santiago.jpg" alt="" width="100%">
+
+    <div class="container-fluid  p-0">
+        <div id="miCarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner ">
+                <div class="carousel-item active ">
+                    <img src="imagenes/panoramica-santiago.jpg" style="position: relative;" alt="..." class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/panoramica-lasilla.jpg" style="position: relative;" class="d-block w-100"  alt="..." >
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/panoramica-valdivia.jpg" style="position: relative;" class="d-block w-100"  alt="..." >
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/panoramica-torres-del-paine.jpg" style="position: relative;" class="d-block w-100"  alt="..." >
+                </div>
+
+                <a class="carousel-control-prev" href="#miCarrusel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#miCarrusel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+<header class="container-fluid m-0">
+
+
+   
+        <!-- <img src="imagenes/panoramica-santiago.jpg" alt="" width="100%"> -->
         <div id="logo">
             <img src="imagenes/logo-xe.png" alt="" width="25%;" style="border-radius: 50%;">
         </div>
-    </div>
+    
 
  
  
+    
+
+
+
+
+
+
+
 </header>
 
 <nav>
@@ -220,15 +262,15 @@
 <table>
     <tr class="azul" id="titulo_tabla" >
         <th></th>
-        <th><img src="imagenes/usd.svg" alt=""> USD</th> 
-        <th><img src="imagenes/eur.svg" alt=""> EUR</th>
-        <th><img src="imagenes/gbp.svg" alt="">GBP</th>
-        <th><img src="imagenes/inr.svg" alt=""> INR</th>
-        <th><img src="imagenes/aud.svg" alt=""> AUD</th>
+        <th><img src="imagenes/usd.svg">  USD</th> 
+        <th><img src="imagenes/eur.svg">  EUR</th>
+        <th><img src="imagenes/gbp.svg">  GBP</th>
+        <th><img src="imagenes/inr.svg">  INR</th>
+        <th><img src="imagenes/aud.svg">  AUD</th>
     </tr>
     
     <tr class="gris">
-        <th><img src="imagenes/usd.svg"alt=""> USD</th>
+        <th><img src="imagenes/usd.svg">  USD</th>
         <td>1,00000</td>
         <td>0,90407</td>
         <td>0,77000</td>
@@ -297,7 +339,12 @@
 
 </footer>
 
-
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
 
 </body>
 </html>
