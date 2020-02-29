@@ -4,159 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo-convertidor-divisas.css">
     <title>convertidor_divisas</title>
-
-    <style>
-
-        body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-
-        #logo{
-            position:absolute;
-            left:10px;
-            top:10px;
-        }
-
-        
-
-        nav{
-            background-color: rgb(28, 28, 80);
-        }
-
-        nav li{
-            display: inline-block;
-            padding: 20px;
-        }
-
-        nav a{
-            color: white;
-            text-decoration:none;
-            
-        }
-
-        nav li:hover{
-            background-color: grey ;
-            color:rgb(28, 28, 80);
-            text-decoration: underline;
-        }
-
-
-
-      
-    
-/*********** CONVERTIDOR DIVISAS ************/
-                
-        .titulo{
-            color:rgb(28, 28, 80)
-        }
-       
-        #convertidor{
-            background-color: rgb(28, 28, 80);
-            color:white;
-            padding-top: 25px;
-            padding-bottom: 25px;
-            text-align: center;
-        }
-
-        #importe, #origen, #destino{
-           height: 40px;
-           border-radius: 25px;
-           width: 180px;
-        }
-
-        #importe{
-            font-size: 25px;
-        }
-        
-        #btn {
-        background: white;
-        background-image: url("peso.svg");
-        background-size: cover;
-        background-position: center;
-        border: none;
-        padding: 20px;
-        width: 60px;
-        border-radius: 900px;
-        transition: all 0.5s;
-        cursor: pointer;
-        }
-        
-        .btn:hover{
-        width: 75px;
-        height: 75px;
-        }
-
-
-
-
-/****************** TABLA *********************/
-
-        table img{
-            width: 45px;
-        }
-
-        table{
-            padding: 19px;
-            margin: auto;
-          /*  border-collapse: collapse;  */
-        }
-
-
-        table tr{
-          /*  border-bottom: darkblue 1px solid;  */
-            text-align: center;
-        }
-
-
-        table td, th{
-            padding: 10px 15px;
-        }
-
-
-        .azul{
-            background-color: rgb(28, 28, 80);
-            color:white
-        }
-
-        .gris{
-            background-color: darkgray;
-            color:rgb(28, 28, 80)
-        }
-
-        /********* FOOTER *************/
-
-        footer li{
-            display: inline-block;
-            border-right: rgb(28, 28, 80) 2px solid;
-            padding-right: 20px;
-            padding-left: 20px;
-
-        }
-
-        
-        footer ul{
-            text-align: center;
-        }
-
-        footer li:last-child {
-        border-right: none;
-        }       
-
-        
-        
-
-    </style>
-
-
 </head>
 <body>
 
+    <div id="logo" class="´position-absolute">
+        <img src="imagenes/logo-xe.png" width="50px;" style="border-radius: 50%;">
+    </div>
 
 
-    <div class="container-fluid  p-0">
-        <div id="miCarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <div class="container-fluid  p-0 position-relative">
+        <div id="miCarrusel" class="carousel slide carousel-fade" data-ride="carousel" >
             <div class="carousel-inner ">
+               
                 <div class="carousel-item active ">
                     <img src="imagenes/panoramica-santiago.jpg" style="position: relative;" alt="..." class="d-block w-100">
                 </div>
@@ -188,9 +50,7 @@
 
    
         <!-- <img src="imagenes/panoramica-santiago.jpg" alt="" width="100%"> -->
-        <div id="logo">
-            <img src="imagenes/logo-xe.png" alt="" width="25%;" style="border-radius: 50%;">
-        </div>
+    
     
 
  
@@ -215,40 +75,60 @@
 </nav>
 
 
+
+
+
+
 <h1 class="titulo">La autoridad mundial en divisas en la que puede confiar</h1>
 
-<div id="convertidor">
-    <h1>Conversor de divisas AXE</h1>
+<div id="convertidor" >
+    <h1>Conversor de divisas XE</h1>
     <br>
-    <label for="importe">Importe</label>
-    <input type="number" name="importe" id="importe" placeholder="1"> 
+    <div class="contenedor2 bg-warning" style="width: 80%; margin: 0 auto; border-radius: 25px;">
+    <div class="row table-bordered">
+        <div class="col-sm-12 col-md-4 col-lg-3   text-center table-bordered">
+            <label for="importe">Importe</label>
+            <input type="number" name="importe" id="importe" placeholder=" 1"> 
+        </div>
+        <div class=" col-sm-12 col-md-6 col-lg-4 text-center table-bordered">
+            <label for="origen">De...</label>
+            <select name=origen id="origen" onchange="cambia_origen()"> 
+                <option value="origen"><img src="imagenes/usd.svg" > USD - Dólar estadounidense
+                <option value="origen">EUR - Euro
+                <option value="origen">GBP - Libra esterlina
+                <option value="origen">INR - Rupia india
+                <option value="origen">AUD - Dólar australiano
+                <option value="origen">CLP - Peso chileno
+                <option value="origen">CLP - Peso chileno
+            </select>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-1 text-center">
+            <button type="button" class="btn btn-outline-primary">cambio</button>
+        </div>
+        <div class=" col-md-8 col-sm-12 col-lg-4 text-center">
+            <label for="destino">Para</label>
+            <select name=destino id="destino" onchange="cambia_destino()"> 
+                <option value="origen"> USD - Dólar estadounidense 
+                <option value="origen">EUR - Euro
+                <option value="origen">GBP - Libra esterlina
+                <option value="origen">INR - Rupia india
+                <option value="origen">AUD - Dólar australiano
+                <option value="origen">CLP - Peso chileno
+                <option value="origen">CLP - Peso chileno
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button type="button" class="btn btn-outline-primary">Convertir moneda</button>
+        </div>
+    </div>  
 
-    <label for="origen">De...</label>
-    <select name=origen id="origen" onchange="cambia_origen()"> 
-        <option value="origen"><img src="imagenes/usd.svg" alt=""> USD - Dólar estadounidense
-        <option value="origen">EUR - Euro
-        <option value="origen">GBP - Libra esterlina
-        <option value="origen">INR - Rupia india
-        <option value="origen">AUD - Dólar australiano
-        <option value="origen">CLP - Peso chileno
-        <option value="origen">CLP - Peso chileno
+    </div>
 
-    </select>
-
-    <input type="button" id="btn" name="cambio">
-
-    <label for="destino">Para</label>
-    <select name=destino id="destino" onchange="cambia_destino()"> 
-        <option value="origen"> USD - Dólar estadounidense 
-            <option value="origen">EUR - Euro
-            <option value="origen">GBP - Libra esterlina
-            <option value="origen">INR - Rupia india
-            <option value="origen">AUD - Dólar australiano
-            <option value="origen">CLP - Peso chileno
-            <option value="origen">CLP - Peso chileno
     
-       
-    </select>
+  
+
 
     <br><br><br> <p style="font-size: small;">Todas las cifras son tipos de cambio del mercado medio en tiempo real, que no están disponibles para los clientes individuales y sirven solo de referencia.</p>
 
@@ -258,19 +138,21 @@
 
 
 <br><br><br>
-<div id="contenedor_tabla" class=".table-responsive table-bordered" >
+<div id="contenedor_tabla" class=".table-responsive table-bordered">
+    <thead class="thead-inverse">
+     
 <table>
     <tr class="azul" id="titulo_tabla" >
         <th></th>
-        <th><img src="imagenes/usd.svg">  USD</th> 
-        <th><img src="imagenes/eur.svg">  EUR</th>
-        <th><img src="imagenes/gbp.svg">  GBP</th>
-        <th><img src="imagenes/inr.svg">  INR</th>
-        <th><img src="imagenes/aud.svg">  AUD</th>
+        <th><img src="imagenes/usd.svg">   USD</th> 
+        <th><img src="imagenes/eur.svg">   EUR</th>
+        <th><img src="imagenes/gbp.svg">   GBP</th>
+        <th><img src="imagenes/inr.svg">   INR</th>
+        <th><img src="imagenes/aud.svg">   AUD</th>
     </tr>
     
     <tr class="gris">
-        <th><img src="imagenes/usd.svg">  USD</th>
+        <th><img src="imagenes/usd.svg">   USD</th>
         <td>1,00000</td>
         <td>0,90407</td>
         <td>0,77000</td>
@@ -279,7 +161,7 @@
     </tr>
   
     <tr class="azul">
-        <th><img src="imagenes/eur.svg" alt=""> </script> EUR</th>
+        <th><img src="imagenes/eur.svg" > </script> EUR</th>
         <td>1,10443</td>
         <td>1,00000</td>
         <td>0,84744</td>
@@ -288,7 +170,7 @@
     </tr>
     
     <tr class="gris">
-        <th><img src="imagenes/gbp.svg" alt=""> GBP</th>
+        <th><img src="imagenes/gbp.svg"> GBP</th>
         <td>1,30326</td>
         <td>1,18003</td>
         <td>1,00000</td>
@@ -298,7 +180,7 @@
     </tr>
     
     <tr class="azul">
-        <th><img src="imagenes/inr.svg" alt=""> INR</th>
+        <th><img src="imagenes/inr.svg"> INR</th>
         <td>0,01406</td>
         <td>0,01273</td>
         <td>0,01079</td>
@@ -308,7 +190,7 @@
     </tr>
 
     <tr class="gris">
-        <th><img src="imagenes/aud.svg" alt=""> AUD</th>
+        <th><img src="imagenes/aud.svg"> AUD</th>
         <td>0,67353</td>
         <td>0,60984</td>
         <td>0,51680</td>
@@ -320,7 +202,7 @@
 </div>
 <br><br>
 <footer style="background-color: darkgray; color: rgb(28, 28, 80);">
-    <hr style="background-color: rgb(28, 28, 80); height: 2px;">
+    <hr style="background-color: rgb(28, 28, 80); height: 1px;">
 
 
     <p style="text-align: center;">1995-2020 AXE.COM SPA.</p>

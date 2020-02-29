@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logo{
+    position:absolute;
+    left:10px;
+    top:10px;
+}
+
+
+
+nav{
+    background-color: rgb(28, 28, 80);
+}
+
+nav li{
+    display: inline-block;
+    padding: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration:none;
+    
+}
+
+nav li:hover{
+    background-color: grey ;
+    color:rgb(28, 28, 80);
+    text-decoration: underline;
+}
+
+
+
+
+
+/*********** CONVERTIDOR DIVISAS ************/
+        
+.titulo{
+    color:rgb(28, 28, 80)
+}
+
+#convertidor{
+    background-color: rgb(28, 28, 80);
+    color:white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+#convertidor div div{
+    margin: 5px 0;
+    
+}
+
+#importe, #origen, #destino{
+   height: 40px;
+   border-radius: 25px;
+   width: 180px;
+}
+
+#importe{
+    font-size: 25px;
+}
+
+#btn {
+
+    background-size: cover;
+    background-position: center;
+    border: none;
+
+    width: 75px;
+    height:75px;
+    border-radius: 900px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/****************** TABLA *********************/
+
+table img{
+    width: 45px;
+}
+
+table{
+    /* padding: 19px; */
+    margin: auto;
+  /*  border-collapse: collapse;  */
+}
+
+
+table tr{
+  /*  border-bottom: darkblue 1px solid;  */
+    text-align: center;
+}
+
+
+table td, th{
+     padding: 3px 10px;
+}
+
+
+.azul{
+    background-color: rgb(28, 28, 80);
+    color:white
+}
+
+.gris{
+    background-color: darkgray;
+    color:rgb(28, 28, 80)
+}
+
+/********* FOOTER *************/
+
+footer li{
+    display: inline-block;
+    border-right: rgb(28, 28, 80) 2px solid;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+
+footer ul{
+    text-align: center;
+}
+
+footer li:last-child {
+    border-right: none;
+}       
+
+
+
